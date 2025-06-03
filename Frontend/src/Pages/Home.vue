@@ -31,15 +31,6 @@
 
     <!-- Show only first 8 blogs -->
     <BlogCard :blogs="filteredBlogs" />
-
-    <div class="text-center mt-6">
-  <RouterLink
-    to="/blogs"
-    class="inline-block px-5 py-2 text-sm font-medium text-white bg-primary rounded-lg hover:bg-primary-600"
-  >
-    View All Blogs
-  </RouterLink>
-</div>
   </div>
 </template>
 

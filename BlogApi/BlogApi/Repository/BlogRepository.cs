@@ -58,7 +58,7 @@ namespace BlogApi.Repository
             await connect.ExecuteAsync(
                 @"UPDATE Blogs SET Title = @Title, Description = @Description, Content = @Content, 
           ImageUrl = @ImageUrl, AuthorName = @AuthorName, CategoryId = @CategoryId, 
-          UpdatedAt = GETDATE() 
+          UpdatedAt = NOW() 
           WHERE Id = @Id;",
                 new
                 {
