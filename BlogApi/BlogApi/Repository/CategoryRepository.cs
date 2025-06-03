@@ -3,6 +3,7 @@ using BlogApi.Models;
 using Dapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
+using Npgsql;
 
 namespace BlogApi.Repository
 {
@@ -30,7 +31,7 @@ namespace BlogApi.Repository
         public async Task AddAsynce(CategoryCreateDto category)
         {
             using var connect = GetConnection();
-            var query = "INSERT INTO Categories (Name) VALUES (@Name); SELECT CAST(SCOPE_IDENTITY() AS int);";
+            var query = "INSERT INTO Categories (Name) VALUES (@Name) RETURNING Id;";
             var newId = await connect.ExecuteScalarAsync<int>(query, category);
             category.Id = newId;
         }
@@ -47,9 +48,9 @@ namespace BlogApi.Repository
             await connect.ExecuteAsync("DELETE FROM Categories WHERE Id=@Id", new { Id = id });
         }
 
-        private SqlConnection GetConnection()
+        private NpgsqlConnection GetConnection()
         {
-            return new SqlConnection(_conn.GetConnectionString("DBConnection"));
+            return new NpgsqlConnection(_conn.GetConnectionString("DBConnection"));
         }
 
         

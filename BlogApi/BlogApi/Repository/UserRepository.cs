@@ -1,6 +1,7 @@
 ﻿using BlogApi.Models;
 using Dapper;
 using Microsoft.Data.SqlClient;
+using Npgsql;
 
 namespace BlogApi.Repository
 {
@@ -35,15 +36,15 @@ namespace BlogApi.Repository
         public async Task InsertAsync(Users users)
         {
             using var connect = GetConnection();
-            var sql = "INSERT INTO Users (Name, Email, PasswordHash, Role, CreatedAt) VALUES (@Name, @Email, @PasswordHash, @Role, @CreatedAt); SELECT CAST(SCOPE_IDENTITY() AS INT);";
+            var sql = "INSERT INTO Users (Name, Email, PasswordHash, Role, CreatedAt) VALUES (@Name, @Email, @PasswordHash, @Role, @CreatedAt) RETURNING Id;";
             var newId = await connect.ExecuteScalarAsync<int>(sql, users);
             users.Id = newId;
 
         }
 
-        private SqlConnection GetConnection()
+        private NpgsqlConnection GetConnection()
         {
-            return new SqlConnection(_conn.GetConnectionString("DBConnection"));
+            return new NpgsqlConnection(_conn.GetConnectionString("DBConnection"));
         }
     }
 }

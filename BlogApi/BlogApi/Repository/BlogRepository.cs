@@ -2,6 +2,7 @@
 using BlogApi.Models;
 using Dapper;
 using Microsoft.Data.SqlClient;
+using Npgsql;
 
 namespace BlogApi.Repository
 {
@@ -35,8 +36,7 @@ namespace BlogApi.Repository
             using var connect = GetConnection();
 
             var query = @"INSERT INTO Blogs (Title, Description, Content, ImageUrl, AuthorName, CategoryId, CreatedAt)
-                  VALUES (@Title, @Description, @Content, @ImageUrl, @AuthorName, @CategoryId, GETDATE());
-                  SELECT CAST(SCOPE_IDENTITY() AS INT);";
+                  VALUES (@Title, @Description, @Content, @ImageUrl, @AuthorName, @CategoryId, GETDATE()) RETURNING Id;";
 
             var newId = await connect.ExecuteScalarAsync<int>(query, new
             {
@@ -78,9 +78,9 @@ namespace BlogApi.Repository
             await connect.ExecuteAsync("DELETE FROM Blogs WHERE Id=@Id", new { Id = id });
         }
 
-        private SqlConnection GetConnection()
+        private NpgsqlConnection GetConnection()
         {
-            return new SqlConnection(_conn.GetConnectionString("DBConnection"));
+            return new NpgsqlConnection(_conn.GetConnectionString("DBConnection"));
         }
     }
 }

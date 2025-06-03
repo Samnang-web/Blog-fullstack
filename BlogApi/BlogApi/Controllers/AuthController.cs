@@ -35,6 +35,7 @@ namespace BlogApi.Controllers
             return Ok(user);
         }
 
+        [Authorize (Roles = "Admin")]
         [HttpPost("register")]
         public async Task<IActionResult> Register(UserDTo dto)
         {

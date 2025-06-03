@@ -1,7 +1,10 @@
 <template>
   <div class="p-6 bg-gray-50 min-h-screen">
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-      <div v-for="blog in props.blogs"
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+    >
+      <div
+        v-for="blog in props.blogs"
         :key="blog.id"
         class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col cursor-pointer"
         @click="handleClick(blog)"
@@ -18,7 +21,9 @@
           >
             {{ blog.title }}
           </h3>
-          <p class="text-gray-600 text-sm mb-3 flex-grow line-clamp-3">{{ blog.description }}</p>
+          <p class="text-gray-600 text-sm mb-3 flex-grow line-clamp-3">
+            {{ blog.description }}
+          </p>
           <div class="text-gray-500 text-xs flex items-center mb-2">
             <Icon
               icon="mdi:account"
@@ -28,7 +33,9 @@
             />
             {{ blog.authorName }}
           </div>
-          <p class="text-gray-400 text-xs">Published: {{ formatDate(blog.createdAt) }}</p>
+          <p class="text-gray-400 text-xs">
+            Published: {{ formatDate(blog.createdAt) }}
+          </p>
         </div>
       </div>
     </div>
@@ -36,10 +43,10 @@
 </template>
 
 <script setup lang="ts">
-import { Icon } from '@iconify/vue';
-import type { Blog } from '../Types/BlogInterface';
-import { defineProps } from 'vue';
-import { useRouter } from 'vue-router';
+import { Icon } from "@iconify/vue";
+import type { Blog } from "../Types/BlogInterface";
+import { defineProps } from "vue";
+import { useRouter } from "vue-router";
 
 const router = useRouter();
 const props = defineProps<{ blogs: Blog[] }>();
@@ -49,10 +56,10 @@ function formatDate(dateStr: string) {
 }
 
 function getFullImageUrl(imageUrl: string | null) {
-  return imageUrl ? `https://localhost:7137${imageUrl}` : '';
+  return imageUrl ? `https://blog-fullstack-w0jp.onrender.com${imageUrl}` : "";
 }
 
 function handleClick(blog: Blog) {
-  router.push({ name: 'BlogPages', params: { id: blog.id } });
+  router.push({ name: "BlogPages", params: { id: blog.id } });
 }
 </script>

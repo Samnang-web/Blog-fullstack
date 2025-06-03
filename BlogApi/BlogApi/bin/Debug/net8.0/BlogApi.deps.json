@@ -12,6 +12,7 @@
           "Dapper": "2.1.24",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.14",
           "Microsoft.Data.SqlClient": "5.2.3",
+          "Npgsql": "8.0.7",
           "Swashbuckle.AspNetCore": "6.6.2"
         },
         "runtime": {
@@ -177,6 +178,12 @@
         }
       },
       "Microsoft.Extensions.ApiDescription.Server/6.0.5": {},
+      "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.0": {},
+      "Microsoft.Extensions.Logging.Abstractions/8.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0"
+        }
+      },
       "Microsoft.Identity.Client/4.61.3": {
         "dependencies": {
           "Microsoft.IdentityModel.Abstractions": "7.1.2",
@@ -279,6 +286,17 @@
           "lib/netstandard2.0/Microsoft.SqlServer.Server.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Npgsql/8.0.7": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/Npgsql.dll": {
+            "assemblyVersion": "8.0.7.0",
+            "fileVersion": "8.0.7.0"
           }
         }
       },
@@ -478,6 +496,20 @@
       "path": "microsoft.extensions.apidescription.server/6.0.5",
       "hashPath": "microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512"
     },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cjWrLkJXK0rs4zofsK4bSdg+jhDLTaxrkXu4gS6Y7MAlCvRyNNgwY/lJi5RDlQOnSZweHqoyvgvbdvQsRIW+hg==",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/8.0.0",
+      "hashPath": "microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Logging.Abstractions/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-arDBqTgFCyS0EvRV7O3MZturChstm50OJ0y9bDJvAcmEPJm0FFpFyjU/JLYyStNGGey081DvnQYlncNX5SJJGA==",
+      "path": "microsoft.extensions.logging.abstractions/8.0.0",
+      "hashPath": "microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512"
+    },
     "Microsoft.Identity.Client/4.61.3": {
       "type": "package",
       "serviceable": true,
@@ -547,6 +579,13 @@
       "sha512": "sha512-N4KeF3cpcm1PUHym1RmakkzfkEv3GRMyofVv40uXsQhCQeglr2OHNcUk2WOG51AKpGO8ynGpo9M/kFXSzghwug==",
       "path": "microsoft.sqlserver.server/1.0.0",
       "hashPath": "microsoft.sqlserver.server.1.0.0.nupkg.sha512"
+    },
+    "Npgsql/8.0.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8QcXw22w43PYvS0/vmH6m566rzCl0ik+8oKBI5LkRikBVSo9XZE2LXa82wU7AZCMgoxJrP65zD93RPv9J/iUwg==",
+      "path": "npgsql/8.0.7",
+      "hashPath": "npgsql.8.0.7.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore/6.6.2": {
       "type": "package",

@@ -26,7 +26,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowFrontend",
         builder =>
         {
-            builder.WithOrigins("http://localhost:5173") // Vue app port
+            builder.WithOrigins("http://localhost:5173", "https://blog-frontend-sigma-ten.vercel.app") // Vue app port
                    .AllowAnyHeader()
                    .AllowAnyMethod();
         });
