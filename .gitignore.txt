@@ -1,0 +1,71 @@
+# ==========================
+# Dotnet / Backend (C#)
+# ==========================
+
+# Build output
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# VS Code settings folder
+.vscode/
+
+# Visual Studio folders
+.vs/
+
+# Dotnet publish output
+publish/
+
+# NuGet packages
+*.nupkg
+*.snupkg
+
+# Logs
+*.log
+
+# ==========================
+# Node / Frontend (Vue.js, React, Vite)
+# ==========================
+
+node_modules/
+dist/
+build/
+.env
+.env.local
+.env.*.local
+
+# Dependency directories
+jspm_packages/
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Optional npm cache directory
+.npm/
+
+# ==========================
+# OS generated files
+# ==========================
+
+.DS_Store
+Thumbs.db
+
+# ==========================
+# Others
+# ==========================
+
+# JetBrains IDEs
+.idea/
+
+# MacOS folder attributes
+.AppleDouble
+.LSOverride
