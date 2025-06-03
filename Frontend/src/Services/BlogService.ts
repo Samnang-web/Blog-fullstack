@@ -2,7 +2,7 @@ import axios from "axios"
 import type { Blog } from "../Types/BlogInterface";
 
 
-const API = import.meta.env.ITE_API_URL;
+const API = import.meta.env.VITE_API_URL;
 
 // export const getBlog = () => axios.get<Blog[]>(`${API}/Blog`);  (option 1)
 export const getBlog = async (): Promise<Blog[]> => {
