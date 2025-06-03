@@ -49,7 +49,7 @@ function formatDate(dateStr: string) {
 }
 
 function getFullImageUrl(imageUrl: string | null) {
-  return imageUrl ? `https://blog-fullstack-w0jp.onrender.com${imageUrl}` : '';
+  return imageUrl ? `https://blog-fullstack-w0jp.onrender.com${imageUrl}` : '/fallback.jpg';
 }
 
 function handleClick(blog: Blog) {
