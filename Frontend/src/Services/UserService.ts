@@ -23,14 +23,8 @@ export const GetCurrentUser = async (): Promise<currentUsers> => {
   return response.data;
 };
 // Add a new user
-export const addUser = async (user: Users): Promise<Users> => {
-  const token = localStorage.getItem("token");
-  const respone = await axios.post<Users>(`${API}/Auth/register`, user, {
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
-  });
-  return respone.data;
+export const addUser = async (user: Users): Promise<void> => {
+  await axios.post(`${API}/Auth/register`, user);
 };
 
 // Delete a user
