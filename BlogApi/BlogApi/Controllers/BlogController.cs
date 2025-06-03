@@ -13,9 +13,11 @@ namespace BlogApi.Controllers
     public class BlogController : ControllerBase
     {
         private readonly IBlogRepository _blogRepo;
-        public BlogController(IBlogRepository blogRepo)
+        private readonly IWebHostEnvironment _env;
+        public BlogController(IBlogRepository blogRepo, IWebHostEnvironment env)
         {
             _blogRepo = blogRepo;
+            _env = env;
         }
 
         [HttpGet]
@@ -41,37 +43,46 @@ namespace BlogApi.Controllers
         {
             try
             {
+                // 1. Validate image
                 if (blog.ImageUrl == null || blog.ImageUrl.Length == 0)
                     return BadRequest("Image file is required.");
 
                 var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif" };
-                var ext = Path.GetExtension(blog.ImageUrl.FileName).ToLowerInvariant();
+                var extension = Path.GetExtension(blog.ImageUrl.FileName).ToLowerInvariant();
 
-                if (!allowedExtensions.Contains(ext))
-                    return BadRequest("Invalid image file type.");
+                if (!allowedExtensions.Contains(extension))
+                    return BadRequest("Invalid image file type. Allowed types: .jpg, .jpeg, .png, .gif");
 
-                var fileName = Guid.NewGuid().ToString() + Path.GetExtension(blog.ImageUrl.FileName);
-                var imagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", fileName);
+                // 2. Save image to wwwroot/images
+                var fileName = Guid.NewGuid().ToString() + extension;
+                var imagesPath = Path.Combine(_env.WebRootPath ?? "wwwroot", "images");
 
-                using (var stream = new FileStream(imagePath, FileMode.Create))
+                if (!Directory.Exists(imagesPath))
+                    Directory.CreateDirectory(imagesPath);
+
+                var filePath = Path.Combine(imagesPath, fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
                 {
                     await blog.ImageUrl.CopyToAsync(stream);
                 }
 
                 var imageUrl = "/images/" + fileName;
 
-                var newBlog = new BlogCreateDto
+                // 3. Add to DB (excluding the image from the DTO object)
+                var blogToCreate = new BlogCreateDto
                 {
                     Title = blog.Title,
                     Description = blog.Description,
                     Content = blog.Content,
                     AuthorName = blog.AuthorName,
                     CategoryId = blog.CategoryId,
-                    ImageUrl = null
+                    ImageUrl = null // only passed separately
                 };
 
-                var newId = await _blogRepo.AddAsync(newBlog, imageUrl);
-                return CreatedAtAction("GetById", new { id = newId }, new
+                var newId = await _blogRepo.AddAsync(blogToCreate, imageUrl);
+
+                return CreatedAtAction(nameof(GetById), new { id = newId }, new
                 {
                     blog.Title,
                     blog.Description,

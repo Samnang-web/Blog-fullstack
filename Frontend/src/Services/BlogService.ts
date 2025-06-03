@@ -6,8 +6,8 @@ const API = import.meta.env.VITE_API_URL;
 
 // export const getBlog = () => axios.get<Blog[]>(`${API}/Blog`);  (option 1)
 export const getBlog = async (): Promise<Blog[]> => {
-    const respone = await axios.get<Blog[]>(`${API}/Blog`);
-    return respone.data;
+    const respones = await axios.get<Blog[]>(`${API}/Blog`);
+    return respones.data;
 }
 
 export const getBlogById = async (id: number): Promise<Blog> => {

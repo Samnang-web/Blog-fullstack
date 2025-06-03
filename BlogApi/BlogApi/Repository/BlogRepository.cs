@@ -36,7 +36,7 @@ namespace BlogApi.Repository
             using var connect = GetConnection();
 
             var query = @"INSERT INTO Blogs (Title, Description, Content, ImageUrl, AuthorName, CategoryId, CreatedAt)
-                  VALUES (@Title, @Description, @Content, @ImageUrl, @AuthorName, @CategoryId, GETDATE()) RETURNING Id;";
+                  VALUES (@Title, @Description, @Content, @ImageUrl, @AuthorName, @CategoryId, NOW()) RETURNING Id;";
 
             var newId = await connect.ExecuteScalarAsync<int>(query, new
             {
