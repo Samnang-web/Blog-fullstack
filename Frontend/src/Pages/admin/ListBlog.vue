@@ -43,7 +43,7 @@
       </thead>
       <tbody>
         <tr
-          v-for="(blog, index) in paginatedBlogs"
+          v-for="(blog) in paginatedBlogs"
           :key="blog.id"
           class="hover:bg-gray-50 transition"
         >
