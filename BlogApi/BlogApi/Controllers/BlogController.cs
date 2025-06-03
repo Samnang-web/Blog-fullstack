@@ -35,7 +35,7 @@ namespace BlogApi.Controllers
             return Ok(blog);
         }
 
-        [Authorize(Roles = "Admin, Author")]
+        
         [HttpPost]
         public async Task<IActionResult> AddNew([FromForm] BlogCreateDto blog)
         {
