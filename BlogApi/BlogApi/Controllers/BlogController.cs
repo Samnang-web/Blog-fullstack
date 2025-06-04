@@ -30,7 +30,6 @@ namespace BlogApi.Controllers
             _cloudinary = new Cloudinary(account);
         }
 
-        [Authorize(Roles = "Admin,Editor, Author")]
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
