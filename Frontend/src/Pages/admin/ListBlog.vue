@@ -30,7 +30,7 @@
     </div>
 
     <!-- Blog Table -->
-    <table class="w-full table-auto border-collapse text-left">
+    <table class="w-full table-auto border-collapse text-left ">
       <thead>
         <tr class="bg-gray-100">
           <th class="p-3 border">#</th>
@@ -160,7 +160,7 @@ const truncateText = (text: string, maxLength = 30): string => {
 const formatDate = (dateString?: string): string => {
   if (!dateString) return 'N/A'
   const date = new Date(dateString)
-  return date.toLocaleDateString(undefined, {
+  return date.toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'short',
     day: 'numeric'

@@ -9,6 +9,7 @@ import BlogPages from "./components/BlogPages.vue";
 import ListBlog from "./Pages/admin/ListBlog.vue";
 import Layout from "./Pages/admin/Layout.vue";
 import Profile from "./Pages/admin/Profile.vue";
+import Category from "./Pages/admin/Category.vue";
 
 const routes = [
   { path: "/", name: "Home", component: Home },
@@ -42,6 +43,12 @@ const routes = [
         path: "listblog",
         name: "ListBlog",
         component: ListBlog,
+        meta: { requiresAuth: true },
+      },
+      {
+        path: "category",
+        name: "Category",
+        component: Category,
         meta: { requiresAuth: true },
       },
       {

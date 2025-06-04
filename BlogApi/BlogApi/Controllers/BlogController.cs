@@ -1,6 +1,8 @@
 ﻿using BlogApi.DTOs;
 using BlogApi.Models;
 using BlogApi.Repository;
+using CloudinaryDotNet;
+using CloudinaryDotNet.Actions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -14,12 +16,21 @@ namespace BlogApi.Controllers
     {
         private readonly IBlogRepository _blogRepo;
         private readonly IWebHostEnvironment _env;
-        public BlogController(IBlogRepository blogRepo, IWebHostEnvironment env)
+        private readonly ICloudinary _cloudinary;
+        public BlogController(IBlogRepository blogRepo, IWebHostEnvironment env, IConfiguration config)
         {
             _blogRepo = blogRepo;
             _env = env;
+
+            var account = new Account(
+            config["Cloudinary:CloudName"],
+            config["Cloudinary:ApiKey"],
+            config["Cloudinary:ApiSecret"]
+    );
+            _cloudinary = new Cloudinary(account);
         }
 
+        [Authorize(Roles = "Admin,Editor, Author")]
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
@@ -37,13 +48,13 @@ namespace BlogApi.Controllers
             return Ok(blog);
         }
 
-        
+
+        [Authorize(Roles = "Admin,Author")]
         [HttpPost]
         public async Task<IActionResult> AddNew([FromForm] BlogCreateDto blog)
         {
             try
             {
-                // 1. Validate image
                 if (blog.ImageUrl == null || blog.ImageUrl.Length == 0)
                     return BadRequest("Image file is required.");
 
@@ -51,25 +62,22 @@ namespace BlogApi.Controllers
                 var extension = Path.GetExtension(blog.ImageUrl.FileName).ToLowerInvariant();
 
                 if (!allowedExtensions.Contains(extension))
-                    return BadRequest("Invalid image file type. Allowed types: .jpg, .jpeg, .png, .gif");
+                    return BadRequest("Invalid image type.");
 
-                // 2. Save image to wwwroot/images
-                var fileName = Guid.NewGuid().ToString() + extension;
-                var imagesPath = Path.Combine(_env.WebRootPath ?? "wwwroot", "images");
-
-                if (!Directory.Exists(imagesPath))
-                    Directory.CreateDirectory(imagesPath);
-
-                var filePath = Path.Combine(imagesPath, fileName);
-
-                using (var stream = new FileStream(filePath, FileMode.Create))
+                // Upload image to Cloudinary
+                var uploadParams = new ImageUploadParams
                 {
-                    await blog.ImageUrl.CopyToAsync(stream);
-                }
+                    File = new FileDescription(blog.ImageUrl.FileName, blog.ImageUrl.OpenReadStream()),
+                    Folder = "blog_images"
+                };
 
-                var imageUrl = "/images/" + fileName;
+                var uploadResult = await _cloudinary.UploadAsync(uploadParams);
 
-                // 3. Add to DB (excluding the image from the DTO object)
+                if (uploadResult.StatusCode != System.Net.HttpStatusCode.OK)
+                    return StatusCode(500, "Image upload failed.");
+
+                var imageUrl = uploadResult.SecureUrl.ToString();
+
                 var blogToCreate = new BlogCreateDto
                 {
                     Title = blog.Title,
@@ -77,7 +85,7 @@ namespace BlogApi.Controllers
                     Content = blog.Content,
                     AuthorName = blog.AuthorName,
                     CategoryId = blog.CategoryId,
-                    ImageUrl = null // only passed separately
+                    ImageUrl = null // handled separately
                 };
 
                 var newId = await _blogRepo.AddAsync(blogToCreate, imageUrl);

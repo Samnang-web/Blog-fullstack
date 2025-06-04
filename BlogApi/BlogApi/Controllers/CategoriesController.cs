@@ -31,7 +31,6 @@ namespace BlogApi.Controllers
             return Ok(cate);
         }
 
-        //[Authorize]
         [HttpPost]
         public async Task<IActionResult> AddCategory(CategoryCreateDto category)
         {
@@ -39,7 +38,7 @@ namespace BlogApi.Controllers
             return CreatedAtAction("GetById", new {id = category.Id}, category);
         }
 
-        [Authorize]
+        //[Authorize]
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateCategory(int id, CategoryCreateDto category)
         {
@@ -47,7 +46,7 @@ namespace BlogApi.Controllers
             return Ok();
         }
 
-        //[Authorize]
+        [Authorize (Roles = "Admin")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCategory(int id)
         {

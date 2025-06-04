@@ -34,6 +34,14 @@
       </router-link>
 
       <router-link
+        to="/admin/category"
+        :class="['flex items-center space-x-2', linkClass('/admin/category')]"
+      >
+        <Icon icon="ic:baseline-add-circle-outline" width="24" height="24" />
+        <span>Categories</span>
+      </router-link>
+
+      <router-link
         to="/admin/users"
         :class="['flex items-center space-x-2', linkClass('/admin/users')]"
       >
