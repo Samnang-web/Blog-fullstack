@@ -21,8 +21,9 @@
     <div class="mx-5 max-w-3xl md:mx-auto my-10 mt-6">
       <img
         :src="getFullImageUrl(blog.imageUrl)"
-        alt=""
+        alt="Blog image"
         class="rounded-3xl mb-5"
+        loading="lazy"
       />
       <div class="max-w-3xl mx-auto">
         {{ blog.description }}
@@ -46,8 +47,21 @@ onMounted(async () => {
   blog.value = await getBlogById(id);
 });
 
-function getFullImageUrl(url: string | null) {
-  return url ? `https://blog-fullstack-w0jp.onrender.com${url}` : "";
+function getFullImageUrl(imageUrl: string | null) {
+  if (!imageUrl) return "/fallback.jpg";
+
+  if (imageUrl.startsWith("http://") || imageUrl.startsWith("https://")) {
+    if (imageUrl.includes("res.cloudinary.com")) {
+      // Cloudinary image: add transformation (resize, quality, format)
+      return imageUrl.replace(
+        "/upload/",
+        "/upload/w_800,h_500,c_fill,q_auto,f_auto/"
+      );
+    }
+    return imageUrl;
+  }
+
+  return `https://blog-fullstack-w0jp.onrender.com${imageUrl}`;
 }
 
 function formatDate(dateStr: string | undefined) {
