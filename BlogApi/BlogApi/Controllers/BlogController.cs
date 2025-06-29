@@ -1,10 +1,8 @@
 ﻿using BlogApi.DTOs;
-using BlogApi.Models;
-using BlogApi.Repository;
+using BlogApi.Services;
 using CloudinaryDotNet;
 using CloudinaryDotNet.Actions;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 
@@ -14,39 +12,36 @@ namespace BlogApi.Controllers
     [ApiController]
     public class BlogController : ControllerBase
     {
-        private readonly IBlogRepository _blogRepo;
-        private readonly IWebHostEnvironment _env;
+        private readonly IBlogService _blogService;
         private readonly ICloudinary _cloudinary;
-        public BlogController(IBlogRepository blogRepo, IWebHostEnvironment env, IConfiguration config)
+
+        public BlogController(IBlogService blogService, IConfiguration config)
         {
-            _blogRepo = blogRepo;
-            _env = env;
+            _blogService = blogService;
 
             var account = new Account(
-            config["Cloudinary:CloudName"],
-            config["Cloudinary:ApiKey"],
-            config["Cloudinary:ApiSecret"]
-    );
+                config["Cloudinary:CloudName"],
+                config["Cloudinary:ApiKey"],
+                config["Cloudinary:ApiSecret"]
+            );
             _cloudinary = new Cloudinary(account);
         }
 
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var blog = await _blogRepo.GetAllAsync();
-            return Ok(blog);
+            var blogs = await _blogService.GetAllBlog();
+            return Ok(blogs);
         }
 
-       
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
-            var blog = await _blogRepo.GetByIdAsync(id);
+            var blog = await _blogService.GetByIdAsync(id);
             if (blog == null)
-                return BadRequest("Not Found!");
+                return NotFound();
             return Ok(blog);
         }
-
 
         [Authorize(Roles = "Admin,Author")]
         [HttpPost]
@@ -63,7 +58,6 @@ namespace BlogApi.Controllers
                 if (!allowedExtensions.Contains(extension))
                     return BadRequest("Invalid image type.");
 
-                // Upload image to Cloudinary
                 var uploadParams = new ImageUploadParams
                 {
                     File = new FileDescription(blog.ImageUrl.FileName, blog.ImageUrl.OpenReadStream()),
@@ -77,17 +71,7 @@ namespace BlogApi.Controllers
 
                 var imageUrl = uploadResult.SecureUrl.ToString();
 
-                var blogToCreate = new BlogCreateDto
-                {
-                    Title = blog.Title,
-                    Description = blog.Description,
-                    Content = blog.Content,
-                    AuthorName = blog.AuthorName,
-                    CategoryId = blog.CategoryId,
-                    ImageUrl = null // handled separately
-                };
-
-                var newId = await _blogRepo.AddAsync(blogToCreate, imageUrl);
+                var newId = await _blogService.CreateAsync(blog, imageUrl);
 
                 return CreatedAtAction(nameof(GetById), new { id = newId }, new
                 {
@@ -116,7 +100,10 @@ namespace BlogApi.Controllers
             if (roleClaim != "Admin" && roleClaim != "Editor")
                 return Forbid("You are not authorized");
 
-            await _blogRepo.UpdateAsync(id, blog);
+            var success = await _blogService.UpdateAsync(id, blog);
+            if (!success)
+                return NotFound();
+
             return NoContent();
         }
 
@@ -124,7 +111,10 @@ namespace BlogApi.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            await _blogRepo.DeleteAsync(id);
+            var success = await _blogService.DeleteAsync(id);
+            if (!success)
+                return NotFound();
+
             return NoContent();
         }
 

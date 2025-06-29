@@ -1,44 +1,90 @@
 <template>
-    <div class="bg-gray-900">
-        <div class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg-px-4">
-            <div>
-                <div class="grid grid-cols-2 gap-5 lg:col-span-4 md:grid-cols-4">
-                    <div>
-                        <p class="font-medium tracking-wide text-gray-300">Categories</p>
-                        <ul class="mt-2 space-y-2">
-                            <li>
-                                <a href="/" class="text-gray-500 transition-colors duration-300 hover:text-orange-500">New</a>
-                            </li>
-                            <li>
-                                <a href="/" class="text-gray-500 transition-colors duration-300 hover:text-orange-500">World</a>
-                            </li>
-                            <li>
-                                <a href="/" class="text-gray-500 transition-colors duration-300 hover:text-orange-500">Games</a>
-                            </li>
-                            <li>
-                                <a href="/" class="text-gray-500 transition-colors duration-300 hover:text-orange-500">Reference</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <p class="font-medium tracking-wide text-gray-300">Apple</p>
-                        <ul class="mt-2 space-y-2">
-                            <li>
-                                <a href="/" class="text-gray-500 transition-colors duration-300 hover:text-orange-500">Web</a>
-                            </li>
-                            <li>
-                                <a href="/" class="text-gray-500 transition-colors duration-300 hover:text-orange-500">Ecommerce</a>
-                            </li>
-                            <li>
-                                <a href="/" class="text-gray-500 transition-colors duration-300 hover:text-orange-500">Business</a>
-                            </li>
-                            <li>
-                                <a href="/" class="text-gray-500 transition-colors duration-300 hover:text-orange-500">Intertainment</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+  <footer class="bg-gray-900 text-gray-400 py-12">
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
+        <!-- Categories Column -->
+        <div>
+          <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase mb-4">
+            Categories
+          </h3>
+          <ul class="space-y-3">
+            <li>
+              <a href="/" class="hover:text-blue-500 transition-colors duration-300">
+                New
+              </a>
+            </li>
+            <li>
+              <a href="/" class="hover:text-blue-500 transition-colors duration-300">
+                World
+              </a>
+            </li>
+            <li>
+              <a href="/" class="hover:text-blue-500 transition-colors duration-300">
+                Games
+              </a>
+            </li>
+            <li>
+              <a href="/" class="hover:text-blue-500 transition-colors duration-300">
+                Reference
+              </a>
+            </li>
+          </ul>
         </div>
+
+        <!-- Apple Column -->
+        <div>
+          <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase mb-4">
+            Apple
+          </h3>
+          <ul class="space-y-3">
+            <li>
+              <a href="/" class="hover:text-blue-500 transition-colors duration-300">
+                Web
+              </a>
+            </li>
+            <li>
+              <a href="/" class="hover:text-blue-500 transition-colors duration-300">
+                Ecommerce
+              </a>
+            </li>
+            <li>
+              <a href="/" class="hover:text-blue-500 transition-colors duration-300">
+                Business
+              </a>
+            </li>
+            <li>
+              <a href="/" class="hover:text-blue-500 transition-colors duration-300">
+                Entertainment
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Extra Columns or Info -->
+        <div>
+          <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase mb-4">
+            About Us
+          </h3>
+          <p class="text-sm text-gray-500">
+            Your blog about tech, games, and more. Stay updated with our latest posts.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase mb-4">
+            Contact
+          </h3>
+          <ul class="space-y-3 text-sm text-gray-500">
+            <li>Email: contact@samnang.com</li>
+            <li>Phone: (+885) 234 567 890</li>
+            <li>Address: 123 BBK, Phnom Penh City</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-10 border-t border-gray-800 pt-6 text-center text-gray-600 text-xs">
+        © 2025 Samnang Group. All rights reserved.
+      </div>
     </div>
+  </footer>
 </template>

@@ -73,6 +73,7 @@ D:\BlogApp\BlogApi\BlogApi\obj\Debug\net8.0\ref\BlogApi.dll
 D:\BlogApp\BlogApi\BlogApi\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\BlogApp\BlogApi\BlogApi\bin\Debug\net8.0\BCrypt.Net-Next.dll
 D:\BlogApp\BlogApi\BlogApi\bin\Debug\net8.0\BlogApi.staticwebassets.runtime.json
-D:\BlogApp\BlogApi\BlogApi\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\BlogApp\BlogApi\BlogApi\bin\Debug\net8.0\Npgsql.dll
 D:\BlogApp\BlogApi\BlogApi\obj\Debug\net8.0\BlogApi.sourcelink.json
+D:\BlogApp\BlogApi\blogapi\bin\Debug\net8.0\CloudinaryDotNet.dll
+D:\BlogApp\BlogApi\blogapi\bin\Debug\net8.0\Newtonsoft.Json.dll

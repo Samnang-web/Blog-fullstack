@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\BlogApp\\BlogApi\\BlogApi\\BlogApi.csproj": {}
+    "D:\\BlogApp\\BlogApi\\blogapi\\BlogApi.csproj": {}
   },
   "projects": {
-    "D:\\BlogApp\\BlogApi\\BlogApi\\BlogApi.csproj": {
+    "D:\\BlogApp\\BlogApi\\blogapi\\BlogApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\BlogApp\\BlogApi\\BlogApi\\BlogApi.csproj",
+        "projectUniqueName": "D:\\BlogApp\\BlogApi\\blogapi\\BlogApi.csproj",
         "projectName": "BlogApi",
-        "projectPath": "D:\\BlogApp\\BlogApi\\BlogApi\\BlogApi.csproj",
+        "projectPath": "D:\\BlogApp\\BlogApi\\blogapi\\BlogApi.csproj",
         "packagesPath": "C:\\Users\\Ah Poch\\.nuget\\packages\\",
-        "outputPath": "D:\\BlogApp\\BlogApi\\BlogApi\\obj\\",
+        "outputPath": "D:\\BlogApp\\BlogApi\\blogapi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

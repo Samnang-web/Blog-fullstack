@@ -14,7 +14,7 @@ export interface Users {
   id: number;
   name: string;
   email: string;
-  password?: string; // Optional because we usually don't show it
+  password?: string;
   role: string;
 }
 

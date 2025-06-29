@@ -12,9 +12,21 @@
 
       <div class="flex items-center gap-4">
         <span class="text-sm hidden sm:inline font-bold text-gray-600 capitalize">{{ user.role }}</span>
+        <!-- Avatar -->
         <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-blue-500 to-purple-500 flex items-center justify-center text-white text-2xl font-semibold">
           {{ user.name.charAt(0).toUpperCase() }}
         </div>
+
+        <!-- View Website Button -->
+        <a
+          href="/"
+          target="_blank"
+          class="ml-3 flex items-center text-sm px-5 py-2 border border-primary text-primary rounded-full hover:bg-primary hover:text-white transition"
+        >
+          <Icon icon="mdi:eye-outline" width="20" height="20" />
+          <span class="ml-1">View Website</span>
+        </a>
+        <!-- Logout Button -->
         <button
           @click="logout"
           class="ml-3 flex items-center text-sm px-6 py-2 bg-primary text-white rounded-full hover:bg-primary/90"
@@ -32,6 +44,7 @@
     </div>
   </div>
 </template>
+
 <script setup lang="ts">
 import SideBar from '../../admin/SideBar.vue'
 import { useRouter } from 'vue-router'
@@ -49,7 +62,6 @@ onMounted(() => {
     router.push('/login')
   }
 
-  // You can optionally fetch user info from API or localStorage here
 })
 
 const logout = () => {
