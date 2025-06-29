@@ -14,7 +14,7 @@ namespace BlogApi.Repository
             _conn = conn;
         }
 
-        public async Task<IEnumerable<BlogDTo>> GetAllAsync()
+        public async Task<IEnumerable<BlogDto>> GetAllAsync()
         {
             using var connect = GetConnection();
 
@@ -26,7 +26,7 @@ namespace BlogApi.Repository
             try
             {
                 
-                var blogs = await connect.QueryAsync<BlogDTo>(sql);
+                var blogs = await connect.QueryAsync<BlogDto>(sql);
                 return blogs;
             }
             catch (Exception ex)

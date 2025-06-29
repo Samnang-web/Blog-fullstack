@@ -2,7 +2,7 @@
 
 namespace BlogApi.DTOs
 {
-    public class BlogDTo
+    public class BlogDto
     {
         public int Id { get; set; }
         public string Title { get; set; }

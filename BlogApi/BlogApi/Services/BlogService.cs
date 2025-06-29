@@ -13,7 +13,7 @@ namespace BlogApi.Services
             _repo = repo;
         }
 
-        public async Task<IEnumerable<BlogDTo>> GetAllBlog()
+        public async Task<IEnumerable<BlogDto>> GetAllBlog()
         {
             return await _repo.GetAllAsync();
         }
