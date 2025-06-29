@@ -25,9 +25,13 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", policy =>
     {
-        policy.WithOrigins("http://localhost:5173", "https://blog-frontend-sigma-ten.vercel.app")
-              .AllowAnyHeader()
-              .AllowAnyMethod();
+        policy.WithOrigins(
+            "http://localhost:5173",
+            "https://blog-frontend-sigma-ten.vercel.app"
+        )
+        .AllowAnyHeader()
+        .AllowAnyMethod()
+        .AllowCredentials();
     });
 });
 
@@ -79,6 +83,6 @@ app.UseStaticFiles(new StaticFileOptions
 });
 
 app.MapControllers();
-app.MapFallbackToFile("index.html"); // For SPA fallback if needed
+app.MapFallbackToFile("index.html");
 
 app.Run();
