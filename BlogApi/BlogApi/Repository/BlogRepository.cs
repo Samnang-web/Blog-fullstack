@@ -14,7 +14,7 @@ namespace BlogApi.Repository
             _conn = conn;
         }
 
-        public async Task<IEnumerable<BlogDTo?>> GetAllAsync()
+        public async Task<IEnumerable<BlogDTo>> GetAllAsync()
         {
             using var connect = GetConnection();
 
@@ -23,22 +23,17 @@ namespace BlogApi.Repository
                 FROM Blogs b 
                 INNER JOIN Categories c ON b.CategoryId = c.Id";
 
-            var blogs = await connect.QueryAsync<Blog>(sql);
-
-            // Manually map Blog to BlogDto (or use AutoMapper in service)
-            var result = blogs.Select(b => new BlogDTo
+            try
             {
-                Id = b.Id,
-                Title = b.Title,
-                Description = b.Description,
-                ImageUrl = b.ImageUrl,
-                CreatedAt = b.CreatedAt,
-                UpdatedAt = b.UpdatedAt,
-                AuthorName = b.AuthorName,
-                CategoryName = "" // You must add logic here if you want to fill CategoryName, or query it separately
-            });
-
-            return result;
+                
+                var blogs = await connect.QueryAsync<BlogDTo>(sql);
+                return blogs;
+            }
+            catch (Exception ex)
+            {
+                
+                throw new Exception("Failed to retrieve blogs from database", ex);
+            }
         }
 
         public async Task<Blog?> GetByIdAsync(int id)
