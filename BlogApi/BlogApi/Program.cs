@@ -28,7 +28,7 @@ builder.Services.AddCors(options =>
     {
         policy.WithOrigins(
             "http://localhost:5173",
-            "https://blog-frontend-sigma-ten.vercel.app"
+            "https://blog-fullstack-alpha.vercel.app"
         )
         .AllowAnyHeader()
         .AllowAnyMethod()
