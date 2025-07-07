@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "p+WOvLHE+tSX2ILCiTqgBdFEWun7dbp7ifqScrkVZ/M=",
+  "Hash": "XrD7JC+r9MwfkKAOAS0BArFpjp2WiLVPZNk6s/bSS9o=",
   "Source": "BlogApi",
   "BasePath": "_content/BlogApi",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "BlogApi\\wwwroot",
       "Source": "BlogApi",
-      "ContentRoot": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\",
+      "ContentRoot": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\",
       "BasePath": "_content/BlogApi",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\images\\0670f38b-fa35-475d-af9a-5002e2e52b05.jpg",
+      "Identity": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\images\\0670f38b-fa35-475d-af9a-5002e2e52b05.jpg",
       "SourceId": "BlogApi",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\",
+      "ContentRoot": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\",
       "BasePath": "_content/BlogApi",
       "RelativePath": "images/0670f38b-fa35-475d-af9a-5002e2e52b05#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -38,10 +38,10 @@
       "OriginalItemSpec": "wwwroot\\images\\0670f38b-fa35-475d-af9a-5002e2e52b05.jpg"
     },
     {
-      "Identity": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\images\\0c1f39d9-7d58-47c9-863e-a17a9d926381.jpg",
+      "Identity": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\images\\0c1f39d9-7d58-47c9-863e-a17a9d926381.jpg",
       "SourceId": "BlogApi",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\",
+      "ContentRoot": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\",
       "BasePath": "_content/BlogApi",
       "RelativePath": "images/0c1f39d9-7d58-47c9-863e-a17a9d926381#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -59,10 +59,10 @@
       "OriginalItemSpec": "wwwroot\\images\\0c1f39d9-7d58-47c9-863e-a17a9d926381.jpg"
     },
     {
-      "Identity": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\images\\2fd054c9-4f2a-4dad-b24d-d57662f1bdc2.jpg",
+      "Identity": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\images\\2fd054c9-4f2a-4dad-b24d-d57662f1bdc2.jpg",
       "SourceId": "BlogApi",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\",
+      "ContentRoot": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\",
       "BasePath": "_content/BlogApi",
       "RelativePath": "images/2fd054c9-4f2a-4dad-b24d-d57662f1bdc2#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -80,10 +80,10 @@
       "OriginalItemSpec": "wwwroot\\images\\2fd054c9-4f2a-4dad-b24d-d57662f1bdc2.jpg"
     },
     {
-      "Identity": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\images\\31e24ee1-ed26-459e-943b-1402cdeaa8fb.jpg",
+      "Identity": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\images\\31e24ee1-ed26-459e-943b-1402cdeaa8fb.jpg",
       "SourceId": "BlogApi",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\",
+      "ContentRoot": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\",
       "BasePath": "_content/BlogApi",
       "RelativePath": "images/31e24ee1-ed26-459e-943b-1402cdeaa8fb#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -101,10 +101,10 @@
       "OriginalItemSpec": "wwwroot\\images\\31e24ee1-ed26-459e-943b-1402cdeaa8fb.jpg"
     },
     {
-      "Identity": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\images\\339b89a6-e847-4e3b-8668-a330b78acddf.jpg",
+      "Identity": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\images\\339b89a6-e847-4e3b-8668-a330b78acddf.jpg",
       "SourceId": "BlogApi",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\",
+      "ContentRoot": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\",
       "BasePath": "_content/BlogApi",
       "RelativePath": "images/339b89a6-e847-4e3b-8668-a330b78acddf#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -122,10 +122,10 @@
       "OriginalItemSpec": "wwwroot\\images\\339b89a6-e847-4e3b-8668-a330b78acddf.jpg"
     },
     {
-      "Identity": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\images\\54893fec-d0d1-4cd5-8cac-bc01b6bc0df5.jpg",
+      "Identity": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\images\\54893fec-d0d1-4cd5-8cac-bc01b6bc0df5.jpg",
       "SourceId": "BlogApi",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\",
+      "ContentRoot": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\",
       "BasePath": "_content/BlogApi",
       "RelativePath": "images/54893fec-d0d1-4cd5-8cac-bc01b6bc0df5#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -143,10 +143,10 @@
       "OriginalItemSpec": "wwwroot\\images\\54893fec-d0d1-4cd5-8cac-bc01b6bc0df5.jpg"
     },
     {
-      "Identity": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\images\\6df2b637-0119-47ba-8eb8-e93356f92525.jpg",
+      "Identity": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\images\\6df2b637-0119-47ba-8eb8-e93356f92525.jpg",
       "SourceId": "BlogApi",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\",
+      "ContentRoot": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\",
       "BasePath": "_content/BlogApi",
       "RelativePath": "images/6df2b637-0119-47ba-8eb8-e93356f92525#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -164,10 +164,10 @@
       "OriginalItemSpec": "wwwroot\\images\\6df2b637-0119-47ba-8eb8-e93356f92525.jpg"
     },
     {
-      "Identity": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\images\\77cd7599-bb45-4de0-8ac0-2436518da6f7.jpg",
+      "Identity": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\images\\77cd7599-bb45-4de0-8ac0-2436518da6f7.jpg",
       "SourceId": "BlogApi",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\",
+      "ContentRoot": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\",
       "BasePath": "_content/BlogApi",
       "RelativePath": "images/77cd7599-bb45-4de0-8ac0-2436518da6f7#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -185,10 +185,10 @@
       "OriginalItemSpec": "wwwroot\\images\\77cd7599-bb45-4de0-8ac0-2436518da6f7.jpg"
     },
     {
-      "Identity": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\images\\a42c5bea-173d-4d43-9175-bfd2989a721c.jpg",
+      "Identity": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\images\\a42c5bea-173d-4d43-9175-bfd2989a721c.jpg",
       "SourceId": "BlogApi",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\",
+      "ContentRoot": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\",
       "BasePath": "_content/BlogApi",
       "RelativePath": "images/a42c5bea-173d-4d43-9175-bfd2989a721c#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -206,10 +206,10 @@
       "OriginalItemSpec": "wwwroot\\images\\a42c5bea-173d-4d43-9175-bfd2989a721c.jpg"
     },
     {
-      "Identity": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\images\\ce9527d9-5ecc-4c9e-aed0-79c11e67b407.jpg",
+      "Identity": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\images\\ce9527d9-5ecc-4c9e-aed0-79c11e67b407.jpg",
       "SourceId": "BlogApi",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\",
+      "ContentRoot": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\",
       "BasePath": "_content/BlogApi",
       "RelativePath": "images/ce9527d9-5ecc-4c9e-aed0-79c11e67b407#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -227,10 +227,10 @@
       "OriginalItemSpec": "wwwroot\\images\\ce9527d9-5ecc-4c9e-aed0-79c11e67b407.jpg"
     },
     {
-      "Identity": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\images\\dfe83ca5-5f34-4ed3-9c2b-9dfb3c1920c2.jpg",
+      "Identity": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\images\\dfe83ca5-5f34-4ed3-9c2b-9dfb3c1920c2.jpg",
       "SourceId": "BlogApi",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\",
+      "ContentRoot": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\",
       "BasePath": "_content/BlogApi",
       "RelativePath": "images/dfe83ca5-5f34-4ed3-9c2b-9dfb3c1920c2#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -248,10 +248,10 @@
       "OriginalItemSpec": "wwwroot\\images\\dfe83ca5-5f34-4ed3-9c2b-9dfb3c1920c2.jpg"
     },
     {
-      "Identity": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\images\\e6d0f3dc-2cd0-4440-8fcd-5a296a5feae9.jpg",
+      "Identity": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\images\\e6d0f3dc-2cd0-4440-8fcd-5a296a5feae9.jpg",
       "SourceId": "BlogApi",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\",
+      "ContentRoot": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\",
       "BasePath": "_content/BlogApi",
       "RelativePath": "images/e6d0f3dc-2cd0-4440-8fcd-5a296a5feae9#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -272,7 +272,7 @@
   "Endpoints": [
     {
       "Route": "images/0670f38b-fa35-475d-af9a-5002e2e52b05.jpg",
-      "AssetFile": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\images\\0670f38b-fa35-475d-af9a-5002e2e52b05.jpg",
+      "AssetFile": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\images\\0670f38b-fa35-475d-af9a-5002e2e52b05.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -309,7 +309,7 @@
     },
     {
       "Route": "images/0670f38b-fa35-475d-af9a-5002e2e52b05.rs24rtmdrj.jpg",
-      "AssetFile": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\images\\0670f38b-fa35-475d-af9a-5002e2e52b05.jpg",
+      "AssetFile": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\images\\0670f38b-fa35-475d-af9a-5002e2e52b05.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -354,7 +354,7 @@
     },
     {
       "Route": "images/0c1f39d9-7d58-47c9-863e-a17a9d926381.jpg",
-      "AssetFile": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\images\\0c1f39d9-7d58-47c9-863e-a17a9d926381.jpg",
+      "AssetFile": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\images\\0c1f39d9-7d58-47c9-863e-a17a9d926381.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -391,7 +391,7 @@
     },
     {
       "Route": "images/0c1f39d9-7d58-47c9-863e-a17a9d926381.n0bpb7t8gl.jpg",
-      "AssetFile": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\images\\0c1f39d9-7d58-47c9-863e-a17a9d926381.jpg",
+      "AssetFile": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\images\\0c1f39d9-7d58-47c9-863e-a17a9d926381.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -436,7 +436,7 @@
     },
     {
       "Route": "images/2fd054c9-4f2a-4dad-b24d-d57662f1bdc2.jpg",
-      "AssetFile": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\images\\2fd054c9-4f2a-4dad-b24d-d57662f1bdc2.jpg",
+      "AssetFile": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\images\\2fd054c9-4f2a-4dad-b24d-d57662f1bdc2.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -473,7 +473,7 @@
     },
     {
       "Route": "images/2fd054c9-4f2a-4dad-b24d-d57662f1bdc2.rs24rtmdrj.jpg",
-      "AssetFile": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\images\\2fd054c9-4f2a-4dad-b24d-d57662f1bdc2.jpg",
+      "AssetFile": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\images\\2fd054c9-4f2a-4dad-b24d-d57662f1bdc2.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -518,7 +518,7 @@
     },
     {
       "Route": "images/31e24ee1-ed26-459e-943b-1402cdeaa8fb.jpg",
-      "AssetFile": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\images\\31e24ee1-ed26-459e-943b-1402cdeaa8fb.jpg",
+      "AssetFile": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\images\\31e24ee1-ed26-459e-943b-1402cdeaa8fb.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -555,7 +555,7 @@
     },
     {
       "Route": "images/31e24ee1-ed26-459e-943b-1402cdeaa8fb.n0bpb7t8gl.jpg",
-      "AssetFile": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\images\\31e24ee1-ed26-459e-943b-1402cdeaa8fb.jpg",
+      "AssetFile": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\images\\31e24ee1-ed26-459e-943b-1402cdeaa8fb.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -600,7 +600,7 @@
     },
     {
       "Route": "images/339b89a6-e847-4e3b-8668-a330b78acddf.d4blytc1xl.jpg",
-      "AssetFile": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\images\\339b89a6-e847-4e3b-8668-a330b78acddf.jpg",
+      "AssetFile": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\images\\339b89a6-e847-4e3b-8668-a330b78acddf.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -645,7 +645,7 @@
     },
     {
       "Route": "images/339b89a6-e847-4e3b-8668-a330b78acddf.jpg",
-      "AssetFile": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\images\\339b89a6-e847-4e3b-8668-a330b78acddf.jpg",
+      "AssetFile": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\images\\339b89a6-e847-4e3b-8668-a330b78acddf.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -682,7 +682,7 @@
     },
     {
       "Route": "images/54893fec-d0d1-4cd5-8cac-bc01b6bc0df5.d4blytc1xl.jpg",
-      "AssetFile": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\images\\54893fec-d0d1-4cd5-8cac-bc01b6bc0df5.jpg",
+      "AssetFile": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\images\\54893fec-d0d1-4cd5-8cac-bc01b6bc0df5.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -727,7 +727,7 @@
     },
     {
       "Route": "images/54893fec-d0d1-4cd5-8cac-bc01b6bc0df5.jpg",
-      "AssetFile": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\images\\54893fec-d0d1-4cd5-8cac-bc01b6bc0df5.jpg",
+      "AssetFile": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\images\\54893fec-d0d1-4cd5-8cac-bc01b6bc0df5.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -764,7 +764,7 @@
     },
     {
       "Route": "images/6df2b637-0119-47ba-8eb8-e93356f92525.d4blytc1xl.jpg",
-      "AssetFile": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\images\\6df2b637-0119-47ba-8eb8-e93356f92525.jpg",
+      "AssetFile": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\images\\6df2b637-0119-47ba-8eb8-e93356f92525.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -809,7 +809,7 @@
     },
     {
       "Route": "images/6df2b637-0119-47ba-8eb8-e93356f92525.jpg",
-      "AssetFile": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\images\\6df2b637-0119-47ba-8eb8-e93356f92525.jpg",
+      "AssetFile": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\images\\6df2b637-0119-47ba-8eb8-e93356f92525.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -846,7 +846,7 @@
     },
     {
       "Route": "images/77cd7599-bb45-4de0-8ac0-2436518da6f7.d4blytc1xl.jpg",
-      "AssetFile": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\images\\77cd7599-bb45-4de0-8ac0-2436518da6f7.jpg",
+      "AssetFile": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\images\\77cd7599-bb45-4de0-8ac0-2436518da6f7.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -891,7 +891,7 @@
     },
     {
       "Route": "images/77cd7599-bb45-4de0-8ac0-2436518da6f7.jpg",
-      "AssetFile": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\images\\77cd7599-bb45-4de0-8ac0-2436518da6f7.jpg",
+      "AssetFile": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\images\\77cd7599-bb45-4de0-8ac0-2436518da6f7.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -928,7 +928,7 @@
     },
     {
       "Route": "images/a42c5bea-173d-4d43-9175-bfd2989a721c.jpg",
-      "AssetFile": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\images\\a42c5bea-173d-4d43-9175-bfd2989a721c.jpg",
+      "AssetFile": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\images\\a42c5bea-173d-4d43-9175-bfd2989a721c.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -965,7 +965,7 @@
     },
     {
       "Route": "images/a42c5bea-173d-4d43-9175-bfd2989a721c.n0bpb7t8gl.jpg",
-      "AssetFile": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\images\\a42c5bea-173d-4d43-9175-bfd2989a721c.jpg",
+      "AssetFile": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\images\\a42c5bea-173d-4d43-9175-bfd2989a721c.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1010,7 +1010,7 @@
     },
     {
       "Route": "images/ce9527d9-5ecc-4c9e-aed0-79c11e67b407.d4blytc1xl.jpg",
-      "AssetFile": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\images\\ce9527d9-5ecc-4c9e-aed0-79c11e67b407.jpg",
+      "AssetFile": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\images\\ce9527d9-5ecc-4c9e-aed0-79c11e67b407.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1055,7 +1055,7 @@
     },
     {
       "Route": "images/ce9527d9-5ecc-4c9e-aed0-79c11e67b407.jpg",
-      "AssetFile": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\images\\ce9527d9-5ecc-4c9e-aed0-79c11e67b407.jpg",
+      "AssetFile": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\images\\ce9527d9-5ecc-4c9e-aed0-79c11e67b407.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1092,7 +1092,7 @@
     },
     {
       "Route": "images/dfe83ca5-5f34-4ed3-9c2b-9dfb3c1920c2.jpg",
-      "AssetFile": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\images\\dfe83ca5-5f34-4ed3-9c2b-9dfb3c1920c2.jpg",
+      "AssetFile": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\images\\dfe83ca5-5f34-4ed3-9c2b-9dfb3c1920c2.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1129,7 +1129,7 @@
     },
     {
       "Route": "images/dfe83ca5-5f34-4ed3-9c2b-9dfb3c1920c2.n0bpb7t8gl.jpg",
-      "AssetFile": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\images\\dfe83ca5-5f34-4ed3-9c2b-9dfb3c1920c2.jpg",
+      "AssetFile": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\images\\dfe83ca5-5f34-4ed3-9c2b-9dfb3c1920c2.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1174,7 +1174,7 @@
     },
     {
       "Route": "images/e6d0f3dc-2cd0-4440-8fcd-5a296a5feae9.jpg",
-      "AssetFile": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\images\\e6d0f3dc-2cd0-4440-8fcd-5a296a5feae9.jpg",
+      "AssetFile": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\images\\e6d0f3dc-2cd0-4440-8fcd-5a296a5feae9.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1211,7 +1211,7 @@
     },
     {
       "Route": "images/e6d0f3dc-2cd0-4440-8fcd-5a296a5feae9.rs24rtmdrj.jpg",
-      "AssetFile": "D:\\BlogApp\\BlogApi\\blogapi\\wwwroot\\images\\e6d0f3dc-2cd0-4440-8fcd-5a296a5feae9.jpg",
+      "AssetFile": "D:\\BlogApp\\BlogApi\\BlogApi\\wwwroot\\images\\e6d0f3dc-2cd0-4440-8fcd-5a296a5feae9.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
